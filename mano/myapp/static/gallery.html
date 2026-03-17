@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Image Gallery</h1>
+      <div class="slider">
+       <img id="display" src="a1.jpg" />
+
+    <div class="controls">
+        <button onclick="change(-1)">Previous</button>
+        <button onclick="change(1)">Next</button>
+    </div>
+    </section>
+
+    <script>
+      const images = ["a1.jpg", "a2.jpg", "a3.jpg", "a4.jpg", "a5.jpg"];
+      let index = 0;
+
+      function change(step) {
+        index = (index + step + images.length) % images.length;
+        document.getElementById("display").src = images[index];
+      }
+      
+    </script>
+    <footer>
+      <p>Desinged by Manorajapriyan.l.e</p>
+    </footer>
+  </body>
+    
+</html>
